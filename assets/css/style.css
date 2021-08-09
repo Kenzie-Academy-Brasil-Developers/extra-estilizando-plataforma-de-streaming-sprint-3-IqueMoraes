@@ -1,4 +1,48 @@
 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 /*
 Theme Name: Landing Page Kenzie Academy
 Theme URI: https://kenzie.com.br/
@@ -38,12 +82,14 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     box-sizing: border-box;
     font-family: sans-serif;
     list-style: none;
+    box-sizing: ;
 }
 img{
     max-width: 800px;
 }
 div.flex{
     display: flex;
+    width: 100%;
 }
 div.full-container{
     width: 100%;
@@ -56,9 +102,14 @@ div.large-container{
     margin:0 auto;
 }
 div.container{
-    width: 100%;
+    width: 100vw;
     max-width: 1140px;
-    margin:0 auto;
+    padding:0 30px;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 /* GERAL */
   
@@ -67,15 +118,112 @@ html{}
 /* HTML */
   
 /* BODY */
-body{}
+body{
+    width: 100vw;
+    background-color: #14141435;
+}
 /* BODY */
-  
+
 /* HEADER */
-header{}
+header{
+    width: 100%;
+    padding-top: 20px;
+}
+header div.container div.flex {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+/*----logo----*/
+.logo{
+    width: 25%;
+    max-width: 70px;
+}
+
+figcaption{
+    visibility: hidden;
+}
+figure{
+    height: fit-content;
+}
+/*----menu----*/
+.abrir-submenu {
+    color: white;
+
+}
+.submenu-escondido {
+    display: none;
+}
+
+/*---pesquisar----*/
+.menu-usuario {
+    color:white;
+}
+.pesquisar{
+    text-align: start;
+}
+.pesquisar img{
+    height: 15px;
+    transform: rotate(90deg);
+    object-fit: contain;
+    background-color: blue;
+}
+.usuario {
+
+}
 /* HEADER */
   
 /* FOOTER */
-footer{}
+footer{
+    width: ;
+}
+div.footer-container{
+    width: 100vw;
+    max-width: 1140px;
+    padding:0 30px;
+}
+.footer-flex{
+    display: flex;
+    flex-flow: column nowrap;
+}
+footer a{
+    color:gray;
+    text-decoration: none;
+    
+}
+.footer-links {
+    display: grid;
+    grid-gap:15px;
+}
+.footer-links li{
+    font-size: 13px;
+    padding: 5px 20px 5px 0;
+}
+li{
+    grid-column: ;
+}
+
+
+
+.redes-sociais {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+.redes-sociais li{
+    padding-right: 20px;
+}
+.redes-sociais img{
+    width: 20px;
+}
+.copyright {
+    color: gray;
+    font-size: 11px;
+}
+
 /* FOOTER */
 
 /* INICIAL */
@@ -83,6 +231,7 @@ main{}
 /* INICIAL */
 
 /* EXTRAS */
+
 
 /* para estilizar a scrollbar */
 ::-webkit-scrollbar{}
@@ -97,7 +246,18 @@ main{}
   
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
-  
-    @media screen and (min-width: 800px) {}
+    @media screen and (min-width: 400px) {
+    div.container{
+        max-width: 1735px;
+        margin: 0 60px;
+    }
+}
+    @media screen and (min-width: 800px) {
+
+        .logo {
+            max-width: 92px;
+        }
+
+
+    }
 /* MEDIA QUERIES */
